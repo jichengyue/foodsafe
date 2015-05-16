@@ -32,8 +32,11 @@ public class User {
 	@Column(name="username")
 	private String userName;
 	
+	@Column(name="password")
+	private String password;
+	
 	@ManyToMany(cascade = { CascadeType.PERSIST,CascadeType.MERGE }, fetch = FetchType.EAGER)
-	@JoinTable(name="user_to_role",joinColumns={@JoinColumn(name="user_id")},inverseJoinColumns={@JoinColumn(name="role_id")})
+	@JoinTable(name="user_map_role",joinColumns={@JoinColumn(name="user_id")},inverseJoinColumns={@JoinColumn(name="role_id")})
 	private List<Role> userRoles ;
 	
 }

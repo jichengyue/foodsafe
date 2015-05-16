@@ -1,12 +1,17 @@
 package com.jichengyue.foodsafe.dao;
 
 
+import java.util.List;
+
 import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.collections.IteratorUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import com.jichengyue.foodsafe.pojo.User;
 import com.jichengyue.foodsafe.repository.UserDao;
 
@@ -18,17 +23,17 @@ public class UserDaoTest {
 	@Autowired
 	private UserDao userDao;
 	
-	@Test
+	/*@Test
 	public void testUserRoles(){
-		User user = userDao.findByUserName("¼¾³ÌÔ¾");
+		User user = userDao.findByUserName("ï¿½ï¿½ï¿½ï¿½Ô¾");
 		System.out.println(user.getUserRoles());
 		log.info(user.getUserRoles()+"");
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void testUserFind(){
 		Iterable<User> users = userDao.findAll();
 		List<User> list = IteratorUtils.toList(users.iterator());
 		log.info("=================== \n"+list.get(0));
-	}*/
+	}
 }
